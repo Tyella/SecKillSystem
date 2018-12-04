@@ -15,15 +15,18 @@ public class SuccessKilled {
     //创建时间
     private Date createTime;
 
+    private Product product;
+
     public SuccessKilled(long id) {
         this.id = id;
     }
 
-    public SuccessKilled(long id, long user_phone, short state, Date createTime) {
+    public SuccessKilled(long id, long user_phone, short state, Date createTime, Product product) {
         this.id = id;
         this.user_phone = user_phone;
         this.state = state;
         this.createTime = createTime;
+        this.product = product;
     }
 
     public long getId() {
