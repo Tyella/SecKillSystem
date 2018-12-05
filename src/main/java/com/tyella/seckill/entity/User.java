@@ -13,6 +13,10 @@ public class User{
     //用户手机号
     private long user_phone;
 
+    public User(){
+
+    }
+
     public User(int id) {
         this.id = id;
     }
