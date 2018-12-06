@@ -5,7 +5,7 @@ package com.tyella.seckill.entity;
  */
 public class User{
     //用户id
-    private int id;
+    private long id;
     //用户名
     private String userName;
     //用户密码
@@ -17,18 +17,18 @@ public class User{
 
     }
 
-    public User(int id) {
+    public User(long id) {
         this.id = id;
     }
 
-    public User(int id, String userName, String password, long user_phone) {
+    public User(long id, String userName, String password, long user_phone) {
         this.id = id;
         this.userName = userName;
         this.password = password;
         this.user_phone = user_phone;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 

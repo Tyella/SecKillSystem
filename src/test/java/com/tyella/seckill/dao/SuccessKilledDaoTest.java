@@ -25,4 +25,9 @@ public class SuccessKilledDaoTest {
         System.out.println(product);
     }
 
+    @Test
+    public void testInsertSuccessKilledRecord() throws Exception{
+
+    }
+
 }

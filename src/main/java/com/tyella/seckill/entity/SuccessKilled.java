@@ -6,12 +6,12 @@ import java.util.Date;
   秒杀成功明细信息
  */
 public class SuccessKilled {
-    //秒杀商品id
+    //id
     private long id;
     //用户手机号
     private long user_phone;
     //秒杀状态标识
-    private short state;
+    private int state;
     //创建时间
     private Date createTime;
 
@@ -21,7 +21,7 @@ public class SuccessKilled {
         this.id = id;
     }
 
-    public SuccessKilled(long id, long user_phone, short state, Date createTime, Product product) {
+    public SuccessKilled(long id, long user_phone, int state, Date createTime, Product product) {
         this.id = id;
         this.user_phone = user_phone;
         this.state = state;
@@ -45,11 +45,11 @@ public class SuccessKilled {
         this.user_phone = user_phone;
     }
 
-    public short getState() {
+    public int getState() {
         return state;
     }
 
-    public void setState(short state) {
+    public void setState(int state) {
         this.state = state;
     }
 
