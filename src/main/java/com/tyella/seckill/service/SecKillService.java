@@ -99,5 +99,8 @@ public class SecKillService {
         }
     }
 
+    //TODO
+    //测试contributes不能显示的问题
+
 
 }
