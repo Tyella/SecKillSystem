@@ -1,34 +1,31 @@
 package com.tyella.seckill.entity;
 
-/*
-用户信息实体
+import java.util.Date;
+
+/**
+ * 用户信息
  */
 public class User{
-    //用户id
-    private long id;
-    //用户名
+
+    private int id;
+
     private String userName;
-    //用户密码
-    private String password;
-    //用户手机号
-    private long user_phone;
 
-    public User(){
+    private String phone;        //电话号
 
+    private Date createTime;     //创建时间
+
+    public User() {
     }
 
-    public User(long id) {
-        this.id = id;
-    }
-
-    public User(long id, String userName, String password, long user_phone) {
+    public User(int id, String userName, String phone, Date createTime) {
         this.id = id;
         this.userName = userName;
-        this.password = password;
-        this.user_phone = user_phone;
+        this.phone = phone;
+        this.createTime = createTime;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
@@ -44,20 +41,20 @@ public class User{
         this.userName = userName;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public long getUser_phone() {
-        return user_phone;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setUser_phone(long user_phone) {
-        this.user_phone = user_phone;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
     @Override
@@ -65,8 +62,8 @@ public class User{
         return "User{" +
                 "id=" + id +
                 ", userName='" + userName + '\'' +
-                ", password='" + password + '\'' +
-                ", user_phone=" + user_phone +
+                ", phone='" + phone + '\'' +
+                ", createTime=" + createTime +
                 '}';
     }
 }

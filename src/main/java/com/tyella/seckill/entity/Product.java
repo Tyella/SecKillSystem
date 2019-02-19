@@ -1,43 +1,40 @@
 package com.tyella.seckill.entity;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
-/*
-商品实体信息
- */
+
 public class Product{
 
-    //商品id
-    private long id;
-    //商品名称
-    private String productName;
-    //库存数量
-    private int number;
-    //秒杀开启时间
-    private Date start_time;
-    //秒杀结束时间
-    private Date end_time;
-    //订单创建时间
-    private Date create_time;
+    private int id;
 
-    public Product(long id) {
-        this.id = id;
+    private String productName;
+
+    private BigDecimal price;
+
+    private int stock;
+
+    private Date createTime;
+
+    private int version;   //MySQL锁有用
+
+    public Product() {
     }
 
-    public Product(long id, String productName, int number, Date start_time, Date end_time, Date create_time) {
+    public Product(int id, String productName, BigDecimal price, int stock, Date createTime, int version) {
         this.id = id;
         this.productName = productName;
-        this.number = number;
-        this.start_time = start_time;
-        this.end_time = end_time;
-        this.create_time = create_time;
+        this.price = price;
+        this.stock = stock;
+        this.createTime = createTime;
+        this.version = version;
     }
 
-    public long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -49,47 +46,35 @@ public class Product{
         this.productName = productName;
     }
 
-    public int getNumber() {
-        return number;
+    public BigDecimal getPrice() {
+        return price;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
+    public void setPrice(BigDecimal price) {
+        this.price = price;
     }
 
-    public Date getStart_time() {
-        return start_time;
+    public int getStock() {
+        return stock;
     }
 
-    public void setStart_time(Date start_time) {
-        this.start_time = start_time;
+    public void setStock(int stock) {
+        this.stock = stock;
     }
 
-    public Date getEnd_time() {
-        return end_time;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setEnd_time(Date end_time) {
-        this.end_time = end_time;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
-    public Date getCreate_time() {
-        return create_time;
+    public int getVersion() {
+        return version;
     }
 
-    public void setCreate_time(Date create_time) {
-        this.create_time = create_time;
-    }
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", productName='" + productName + '\'' +
-                ", number=" + number +
-                ", start_time=" + start_time +
-                ", end_time=" + end_time +
-                ", create_time=" + create_time +
-                '}';
+    public void setVersion(int version) {
+        this.version = version;
     }
 }
